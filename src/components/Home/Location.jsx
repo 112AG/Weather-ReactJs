@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 
-function Location({setYourCity}) {
+function Location({change}) {
     
     
     let getLocationAPI = async (lat, long) => {
@@ -10,18 +10,17 @@ function Location({setYourCity}) {
     
         let response = await fetch(`${Location_URL}?lat=${lat}&lon=${long}&appid=${API_KEY}&units=metric`);
         let locationData = await response.json();
-        let city = locationData.name;
         let result = {
-            cityName: city.name,
-            temp: city.main.temp,
-            tempMin: city.main.temp_min,
-            tempMax: city.main.temp_max,
-            humidity: city.main.humidity,
-            feelsLike: city.main.feels_like,
-            weather: city.weather[0].description,
+            cityName: locationData.name,
+            temp: locationData.main.temp,
+            tempMin: locationData.main.temp_min,
+            tempMax: locationData.main.temp_max,
+            humidity: locationData.main.humidity,
+            feelsLike: locationData.main.feels_like,
+            weather: locationData.weather[0].description,
         }
         console.log(result);
-        setYourCity(result);
+        change(result);
     }
 
 // GET YOUR CURRENT LOCATION.
