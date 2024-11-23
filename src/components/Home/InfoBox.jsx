@@ -65,29 +65,26 @@ function InfoBox({ info }) {
                         }
                       />
                     </div>
-                  </div>{" "}
+                  </div>
                   <p className="text-gray-600" id="weather-description">
                     {info.weather}
                   </p>
                 </div>
-                <div className="text-6xl text-gray-600">
-                  <i id="weather-icon" className="fas fa-cloud"></i>
-                </div>
               </div>
               <div className="mt-4 grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm pb-2 text-gray-600">
                     Feels-Like: {info.feelsLike}°C
                   </p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm pb-2 text-gray-600">
                     Max-Temp: {info.tempMax}°C
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm pb-2 text-gray-600">
                     Humidity: {info.humidity}%
                   </p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm pb-2 text-gray-600">
                     Min-Temp: {info.tempMin}°C
                   </p>
                 </div>
