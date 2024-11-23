@@ -51,7 +51,7 @@ function SearchBox({updateInfo}) {
     <div>
         <div className='w-full'>
             <form onSubmit={handleSubmit} className='w-full flex items-end gap-2 justify-start '>
-                <TextField id="city" label="Search City" variant="standard" style={{width: "200px"}} required value={city} onChange={handleChange} />
+                <TextField id="city" label="Search City" variant="standard" style={{width: "160px"}} required value={city} onChange={handleChange} />
                 <Button variant="text" type='submit'>Search</Button> <br />
             </form>
             {error && <p style={{color: "red", marginLeft: "12px", textAlign: "left", fontFamily: "Gilroy"}}>No Such City Exists. <span style={{color: "Green"}}>Try Again</span></p>}
