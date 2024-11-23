@@ -21,7 +21,7 @@ const WeatherApp = () => {
 
 
   return (
-    <div className='flex flex-col items-center justify-center gap-3 my-6'>
+    <div className='flex flex-col items-center justify-center gap-3 my-6 overflow-x-hidden'>
             <div className='w-screen flex items-center justify-between md:px-20 px-11 py-4 flex-wrap gap-6'>
             <SearchBox updateInfo={updateInfo}   />
             <Location change = {setWeatherInfo}/>
