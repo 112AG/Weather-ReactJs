@@ -14,8 +14,8 @@ function InfoBox({ info }) {
     "https://media.istockphoto.com/id/1201968313/photo/man-walking-along-an-unpaved-village-road-at-sunset.jpg?s=612x612&w=0&k=20&c=QDPEQ8h75s1Pd0-GQnGdqw6i9-uA5TLFiczf_bhGdJU=";
   return (
     <div className="h-full w-full flex items-center justify-center flex-col gap-14">
-      <div className="w-11/12 shadow-lg transition hover:shadow-xl h-full rounded-2xl flex items-center justify-around p-6">
-        <div className="container overflow-hidden mx-auto px-4 h-64 w-2/5">
+      <div className="w-11/12 shadow-lg transition hover:shadow-xl h-full rounded-2xl flex items-center justify-around p-6  md:flex-row flex-col">
+        <div className="container overflow-hidden mx-auto px-4 h-64  md:w-2/5 w-11/12">
           <img
             src={
               info.humidity > 80
@@ -28,7 +28,7 @@ function InfoBox({ info }) {
             alt=""
           />
         </div>
-        <div className="w-2/3 mx-auto">
+        <div className="w-11/12 mx-auto md:w-2/3">
           <div className="container mx-auto">
             <div className="bg-white rounded-lg p-6 ">
               <h2 className="text-2xl font-bold mb-4">Current Weather</h2>

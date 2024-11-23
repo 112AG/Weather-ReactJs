@@ -32,9 +32,9 @@ function PopularCities() {
   return (
     <div className="bg-white w-11/12 rounded-lg shadow-lg hover:shadow-xl transition-all p-6">
       <h2 className="text-2xl font-bold mb-4">Other Popular Cities</h2>
-      <div className="w-full flex justify-between items-center gap-2 flex-wrap">
+      <div className="w-full flex justify-around items-center gap-4 flex-wrap">
         {cities.map((city) => (
-          <div key={city} className="p-4 w-64 border rounded-lg shadow">
+          <div key={city} className="p-4 min-w-64 border rounded-lg shadow">
             <h2 className="text-xl font-semibold mb-2">{city}</h2>
             {weatherData[city] ? (
               <div>
